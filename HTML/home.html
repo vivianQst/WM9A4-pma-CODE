@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warwick Booking Website Homepage</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+nav ul li a.login {
+    background-color: #ff5733; 
+    color: white; 
+    font-weight: bold; 
+    border: 2px solid #ff5733; 
+}
+
+nav ul li a.login:hover {
+    background-color: white; 
+    color: #ff5733; 
+    border: 2px solid #ff5733; 
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: rgb(7, 0, 11);
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.banner .image {
+    margin-bottom: 20px;
+}
+
+.banner img {
+    max-width: 200px; 
+    width: 100%;
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.container {
+            padding: 20px;
+            max-width: 1200px; 
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .facilities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .facility {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .facility h2 {
+            margin-top: 0;
+        }
+        .facility img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .facility p {
+            margin: 10px 0;
+        }
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Warwick Booking Website</h1><!--Web title-->
+        <nav><!--Navigator-->
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="login.html" class="login">Login</a></li> <!--Add special class for login link -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="image warwick logo">
+            <img src="static/images/logo.jpg" alt="Warwick Logo">
+        </div>
+        <h2>Welcome to Our Booking Platform</h2>
+        <p>Please use the form below to make a reservation</p>
+    </div>
+
+<!--Facility Information-->
+    <div class="container">
+        <div class="facility" id="gyms">
+            <h2>Gyms</h2>
+            <img src="static/images/gym.jpg" alt="Gym">
+            <p>Our state-of-the-art gyms are equipped with the latest fitness equipment.</p>
+            <p class="hours">Open Hours: 6:00 AM - 10:00 PM</p>
+        </div>
+
+        <div class="facility" id="swimming-pools">
+            <h2>Swimming Pools</h2>
+            <img src="static/images/swimming_pool.jpg" alt="Swimming Pool">
+            <p>Our swimming pools are suitable for both recreational and competitive swimming.</p>
+            <p class="hours">Open Hours: 7:00 AM - 9:00 PM</p>
+        </div>
+
+        <div class="facility" id="tennis-courts">
+            <h2>Tennis Courts</h2>
+            <img src="static/images/tennis_court.jpg" alt="Tennis Court">
+            <p>Enjoy our well-maintained tennis courts, available for booking all year round.</p>
+            <p class="hours">Open Hours: 8:00 AM - 8:00 PM</p>
+        </div>
+
+        <div class="facility" id="football-fields">
+            <h2>Football Fields</h2>
+            <img src="static/images/football_field.jpg" alt="Football Field">
+            <p>Our football fields are perfect for both practice and competitive matches.</p>
+            <p class="hours">Open Hours: 8:00 AM - 10:00 PM</p>
+        </div>
+
+        <div class="facility" id="other-amenities">
+            <h2>Other Amenities</h2>
+            <img src="static/images/other_amenities.jpg" alt="Other Amenities">
+            <p>We offer a range of other sports-related amenities, including basketball courts, squash courts, and more.</p>
+            <p class="hours">Open Hours: 6:00 AM - 10:00 PM</p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@warwickbooking.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Warwick Street, Warwick, UK</p>
+        </div>
+    </footer>
+</body>
+</html>

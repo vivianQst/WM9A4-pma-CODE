@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warwick Booking Website Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav ul li a.login {
+            background-color: #ff5733; /* Set the background colour */
+            color: white; /* set text colour  */
+            font-weight: bold; /* Bold font */
+            border: 2px solid #ff5733; /* set border colour  */
+        }
+        nav ul li a.login:hover {
+            background-color: white; /* background-colour on hover  */
+            color: #ff5733; /* Text colour on hover */
+            border: 2px solid #ff5733; /* border-colour on hover  */
+        }
+        .banner {
+            background: url('banner.jpg') no-repeat center center/cover;
+            color: rgb(7, 0, 11);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+        .banner .image {
+            margin-bottom: 20px;
+        }
+        .banner img {
+            max-width: 200px; /* Set the maximum width of the image  */
+            width: 100%;
+            height: auto; /* Maintaining the aspect ratio*/
+            display: block;
+            margin: 0 auto; /* Picture Centering */
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .booking-form label {
+            margin-top: 10px;
+        }
+        .booking-form input, .booking-form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .booking-form button {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Warwick Booking Website</h1><!--Web title-->
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="login.html" class="login">Login</a></li> <!-- Add special class for login link -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <h2>Welcome to Our Booking Platform</h2>
+        <p>Please use the form below to make a reservation</p>
+    </div>
+
+    <div class="container">
+        <h2>Booking Form</h2><!--booking form -->
+        <form class="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="services">Services:</label>
+
+            <select id="services" name="services" required>
+                <option value="">Select a service</option>
+                <option value="gyms">Gyms</option>
+                <option value="swimming pools">Swimming pools</option>
+                <option value="tennis">Tennis</option>
+                <option value="football fields">Football fields</option>
+                <option value="Others">Others(fill in the message)</option>
+            </select>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: info@warwickbooking.com</p>
+            <p>Phone: +123 456 7890</p>
+            <p>Address: 123 Warwick Street, Warwick, UK</p>
+        </div>
+    </footer>
+</body>
+</html>
